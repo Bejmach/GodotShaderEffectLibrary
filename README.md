@@ -52,6 +52,7 @@ grayscale(vec3 rgb)
 #### needed parameters
 * vec3 rgb - color in rgb
 
+## Blurs
 ### Gaussian blur
 #### desctiption
 returns vec3 of average of colors in certain distance around the UV position
@@ -64,6 +65,7 @@ blur(vec2 viewport_size, sampler2D screen_texture, vec2 screen_uv, int scale, in
 * int scale - distance from point to used pixels(WARNING, setting it to big numbers makes program run signifficantly slower, look at precision to prevent it. number of pixels to take is n\*2+1)
 * int precision - take less pixels from the same area(precission = 3, take ...,-3,0,3,... pixel)
 
+## Outlines
 ### Difference of gaussian
 #### description
 returns vec3 of difference of 2 gaussian blur effects
@@ -87,6 +89,7 @@ sobelFilter(vec2 viewport_size, sampler2D screen_texture, vec2 screen_uv, int si
 * vec2 screen_uv - uv
 * int size - distance from one pixel to another(size = 3, take pixels -3,0,3)
 
+## Components
 ### rgb to hsv
 #### desctiption
 returns vec3 of hsv made from given rgb
@@ -99,6 +102,7 @@ returns vec3 of rgb made from given hsv
 #### construction
 hsvToRgb(vec3 hsv)
 
+## Components 3D
 ### Linear depth
 #### description
 returns float of distance from camera to object by transforming depth taken from texture(depth_texture)(works only in 3D)
