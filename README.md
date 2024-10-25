@@ -10,9 +10,9 @@ Library with graphic effects to godot
 * [Quantization](#quantization)
 * [grayscale](#grayscale)
 #### Blurs
-* [Gaussian blur](#gaussian-blur)
+* [blur](#blur)
 #### Outlines
-* [Difference of gaussian](#difference-of-gaussian)
+* [Difference of gaussian(without gaussian)](#difference-of-gaussian)
 * [Sobel filter](#sobel-filter)
 #### Components
 * [rgb to hsv](#rgb-to-hsv)
@@ -53,7 +53,7 @@ grayscale(vec3 rgb)
 * vec3 rgb - color in rgb
 
 ## Blurs
-### Gaussian blur
+### blur
 #### desctiption
 returns vec3 of average of colors in certain distance around the UV position
 #### construction
@@ -68,7 +68,7 @@ blur(vec2 viewport_size, sampler2D screen_texture, vec2 screen_uv, int scale, in
 ## Outlines
 ### Difference of gaussian
 #### description
-returns vec3 of difference of 2 gaussian blur effects
+returns vec3 of difference of 2 blur effects
 #### construction
 differenceOfGaussian(vec2 viewport_size, sampler2D screen_texture, vec2 screen_uv, int scale_less, int scale_more)
 #### needed parameters
